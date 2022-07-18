@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Card</title>
+    <style>
+        .student_card {
+            width: 360px;
+            /* height: 308px; */
+            border-radius: 8px;
+            overflow: hidden;
+            margin: 0 auto;
+            border: 1px solid #000;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5 {
+            margin: 0;
+            padding: 0;
+        }
+
+        .data-item {
+            font-family: sans-serif;
+            font-size: small;
+            padding: 4px 0;
+        }
+
+        .sign-data-item {
+            font-size: small;
+            font-family: sans-serif;
+        }
+
+        .student_card_header {
+            position: relative;
+            height: 100px;
+            display: block;
+            flex-direction: row;
+            padding: 8px 8px 0 8px;
+            z-index: 1000;
+        }
+
+        .institute_stamp img {
+            width: 100px;
+            height: auto;
+        }
+
+        .institute_info {
+            position: absolute;
+            top: 10px;
+            left: 110px;
+            text-align: center;
+            /* width: 100%; */
+            font-family: sans-serif;
+        }
+
+        .student_card_body {
+            padding: 8px 8px 0 8px;
+        }
+
+        .row {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .col {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+        }
+
+        .student_image {
+            position: relative;
+            width: 100px;
+            height: auto;
+            padding: 4px;
+            background-color: white;
+            border: 1px solid white;
+            border-radius: 8px;
+            text-align: center;
+        }
+
+        .student_image img {
+            height: auto;
+            width: 100%;
+            border-radius: 8px;
+        }
+
+        .institute_admin_sign,
+        .student_sign {
+            width: 30%;
+            height: auto;
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            object-fit: cover;
+        }
+
+        .institute_admin_sign img,
+        .student_sign img {
+            width: 50%;
+            height: auto;
+            margin: 0 auto;
+        }
+
+        .name_sign_divider {
+            margin: 2px 0 2px 0;
+        }
+
+        .student_card_footer {
+            padding: 0 8px 8px 8px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="student_card" style="background-image: url(./bg.png); background-repeat: no-repeat;">
+        <div class="student_card_header">
+            <div class="institute_stamp">
+                <img src="./logo.png">
+            </div>
+            <div class="institute_info">
+                <h2>Institute Name</h2>
+                <h3>Institute Address</h3>
+                <span class="data-item">ID Card of Student Name</span>
+            </div>
+        </div>
+
+        <div class="student_card_body">
+            <div class="row">
+                <div class="col">
+                    <span class="data-item">Name: Student Name</span>
+                    <div class="row">
+                        <div class="col">
+                            <span class="data-item">Class: One (1)</span>
+                            <span class="data-item">Symbol: N/A</span>
+                        </div>
+
+                        <div class="col">
+                            <span class="data-item">Roll No: 0000000001</span>
+                            <span class="data-item">Section: A</span>
+                            <span class="data-item">Date: 18/07/2022</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="student_image">
+                    <img src="./student.png">
+                </div>
+            </div>
+        </div>
+
+        <div class="student_card_footer">
+            <div class="row">
+                <div class="institute_admin_sign">
+                    <img src="./institute_sign.svg" alt="" srcset="">
+                    <hr class="name_sign_divider">
+                    <span class="sign-data-item">Institute Admin</span>
+                </div>
+                <div class="student_sign">
+                    <img src="./student_sign.svg" alt="" srcset="">
+                    <hr class="name_sign_divider">
+                    <span class="sign-data-item">Student</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
